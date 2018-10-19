@@ -1,16 +1,14 @@
-# GitHub Tutorial
-
-_by Alex_
+# GitHub Tutorial by Alex
 
 ---
 ## Git vs. GitHub
 
 Git allows for version control of your files. It allows you to save snapshots (commits) of your files throughout different file changes. Git does not depend on GitHub. It is local repository.  
   
-GitHub, on the other hand, is a remote repository. It *requires* Git (unless you want to upload files manually). GitHub allows you to create remote repositories, where you can use Git to push your commits to the remote repository. Because it is a remote repository, it allows for collaboration with multiple people.
+GitHub, on the other hand, is a remote repository. It ***requires*** Git (unless you want to upload files manually). GitHub allows you to create remote repositories, where you can use Git to push your commits to a remote repository. Because it is a remote repository, it allows for collaboration with multiple people.
 
 ---
-## Initial Setup
+## Setting up your local repository
 
 To setup Git locally, `cd` into your folder and type `git init`, assuming you already have Git installed
 
@@ -29,7 +27,7 @@ You should see a hidden folder called `.git` in your working directory.
 This means that Git has sucessfully set up your local repository
 
 ---
-## Repository Setup
+## Creating your remote repository.
 
 If you do not have a GitHub account, create one [**here**](https://github.com/join?source=header-home)
 
@@ -40,11 +38,42 @@ You should see a green button called **New** on the upper right side of your scr
 
 Now enter your repository name, it should match the name of your local repository. Then click on "Create Repository".
 
-Now, you have both your local and remote repositories set up.
+Now, you have both your local and remote repositories created.
 
-However, we need to establish a connection between our local and remote repository so that we can push commits via the command line.
+---
+## Connecting your local and remote repository
+For every new remote and local repository created, we need to establish a connection between them in order to push commits to your remote from the local.
 
-In order to establish a SSH connection with between our local and remote, we first need to get a SSH key from our IDE. Each IDE varies, but in order to get one from Cloud9, what we can go [here](https://c9.io/account/ssh) and copy the first public SSH key for public repositories, or the second one for private repositories.
+**There are 2 ways of establishing a connection.**
+1. **SSH**
+   * In order to establish a SSH connection with between our local and remote, we first need to get a SSH key from our IDE.
+
+   * Each IDE varies, but in order to get one from Cloud9, we can go [**here**](https://c9.io/account/ssh) and copy the first public SSH key for public repositories, or the second one for private repositories.
+    
+   * We can then add the SSH key into our GitHub account  [**here**](https://github.com/settings/ssh/new), then add a title and paste the key in, then click on "**Add SSH Key**".
+
+2. **HTTPS**
+   * ***Note: HTTPS requires you to sign in to GitHub, unless you have some sort of credential manager that allows Git to save and remember your credentials.***
+    
+   * In order to get the HTTPS url for your repository, simply copy the HTTPS url.
+
+After we have copied the URL (HTTPS or SSH) for our remote repository, we can go back in to our terminal, and `cd` into our working directory if you are already not in it.
+
+To tell Git to connect to a remote, type `git remote add origin <URL>`, where \<URL> is the URL you copied...
+
+To check if our connection has been successfully added, type `git remote -v`, where the `-v` flag means *verbose*, which will show all of our remotes.
+
+Git should output something similar to this:
+* **SSH**
+  ```bash
+  origin  git@github.com:<USERNAME>/<REPOSITORY NAME>.git (fetch)
+  origin  git@github.com:<USERNAME>/<REPOSITORY NAME>.git (push)
+  ```
+* **HTTPS**
+  ```bash
+  origin  https://github.com/<USERNAME>/<REPOSITORY NAME>.git (fetch)
+  origin  https://github.com/<USERNAME>/<REPOSITORY NAME>.git (push)
+  ```
 
 ---
 ## Workflow & Commands
