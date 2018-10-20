@@ -1,6 +1,7 @@
+<img src="./assets/Octocat.png" align="right" width="96" height="96">
+
 # GitHub Tutorial by Alex
 
----
 ## Git vs. GitHub
 
 Git allows for version control of your files. It allows you to save snapshots (commits) of your files throughout different file changes. Git does not depend on GitHub.
@@ -88,6 +89,10 @@ Git should output something similar to this:
 
 Once we have edited our files and want to push to our remote repository, here are the following commands you can follow.
 
+The Git workflow basically consists of edit => add => commit => push.
+
+0. **Edit your files.**
+
 1. **Adding/removing files to the stage.**
 
     The staging area is basically where you can prepare what files should be committed or not. You can add or remove file(s) from the stage.
@@ -110,7 +115,7 @@ Once we have edited our files and want to push to our remote repository, here ar
     
     Commit messages are useful for keeping track all of the changes we have done over time. In additon, commit messages should be short and concise, and also in **PRESENT** tense, not *past* tense even though it seems very tempting.
     
-    To verify/ view all past commits, type `git log`. This will output all previous commits, from the newest to the oldest. 
+    To verify/ view all past commits, type `git log`. This will output all previous commits, from the newest to the o  ldest. 
     
     To exit `git log`, press "Q" on your keyboard.
     
@@ -128,9 +133,22 @@ Once we have edited our files and want to push to our remote repository, here ar
     
     `origin` is basically the nickname of our remote repository's SSH/HTTPS url, while `master` simply means the master branch aka the default branch.
     
-    If you want to tell Git to always push to `origin master`, we can use the `-u` flag.
+    If you want to tell Git to always push to `origin master`, we can use the `-u` flag. The `-u` flag basically means upstream,
     
     So if we run `git push -u origin master`, this will tell Git to remember so that the next time you push again, Git will automatically push to `origin master`. This is only ran once, unless you want to change the remote/branch, otherwise, you can type `git push` for any other pushes.
+    
+    Git should now output something similar to this in your terminal
+    ```bash
+    Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+    Counting objects: 3, done.
+    Delta compression using up to 8 threads.
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 1.17 KiB | 1.17 MiB/s, done.
+    Total 3 (delta 1), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+    To github.com:alexy4744/github-tutorial.git
+    1ead3a2..b56c6a9  master -> master
+    ```
     
     Now, if you go back to your GitHub repository, you should see the files that were added to the staging area; now lives in your remote repository, along with the commit messages you have set! 😎
     
@@ -138,3 +156,7 @@ Once we have edited our files and want to push to our remote repository, here ar
     
 ---
 ## Rolling Back Changes
+
+
+---
+## Collaboration
