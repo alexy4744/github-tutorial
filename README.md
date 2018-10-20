@@ -45,7 +45,9 @@ Now, you have both your local and remote repositories created.
 For every new remote and local repository created, we need to establish a connection between them in order to push commits to your remote from the local.
 
 **There are 2 ways of establishing a connection.**
-1. **SSH**
+1. **SSH**  
+    * ***Note: This should only be done once unless you need to add more SSH keys***
+
     * In order to establish a SSH connection with between our local and remote, we first need to get a SSH key from our IDE.
 
     * Each IDE varies, but in order to get one from Cloud9, we can go [**here**](https://c9.io/account/ssh) and copy the first public SSH key for public repositories, or the second one for private repositories.
@@ -62,6 +64,10 @@ For every new remote and local repository created, we need to establish a connec
 After we have copied the URL (HTTPS or SSH) for our remote repository, we can go back in to our terminal, and `cd` into our working directory if you are already not in it.
 
 To tell Git to connect to a remote, type `git remote add origin <URL>`, where \<URL> is the URL you copied...
+
+> `remote` basically means remote repository.  
+  `add` tells Git to *add* a new remote for this local repository.  
+  `origin` is the nickname we will refer to as the remote repository URL. This can be changed to be whatever you like.
 
 To check if our connection has been successfully added, type `git remote -v`, where the `-v` flag means *verbose*, which will show all of our remotes.
 
@@ -100,15 +106,35 @@ Once we have edited our files and want to push to our remote repository, here ar
 
     Once we have our files added onto the stage, we can now commit those files. Commiting simply means taking a snapshot of our files with all of our changes. We can then push these commits onto GitHub.
    
-    To commit our files, we can use `git commit -m "MESSAGE"`, where the `-m` flag stands for "message", which allows us to enter a string to be used as a commit message. 
+    To commit our files, we can use `git commit -m "MESSAGE"`, where the `-m` flag stands for *message*, which allows us to enter a string to be used as a commit message.
     
     Commit messages are useful for keeping track all of the changes we have done over time. In additon, commit messages should be short and concise, and also in **PRESENT** tense, not *past* tense even though it seems very tempting.
+    
+    To verify/ view all past commits, type `git log`. This will output all previous commits, from the newest to the oldest. 
+    
+    To exit `git log`, press "Q" on your keyboard.
     
     🎉 Tada, you have succesfully created your first commit!
     
 3. **Pushing our commit to our remote repository.**
 
+    Once we have a commit, you can push it to your remote repository.  
+    Keep in mind that you can **ONLY PUSH COMMITS**, nothing else.  
+    You will run into errors if you try to push with no commits.
     
-
+    To push our commit to our GitHub repository, type `git push`.
+    
+    ***However***, since this is our first time pushing, we need to type `git push origin master`
+    
+    `origin` is basically the nickname of our remote repository's SSH/HTTPS url, while `master` simply means the master branch aka the default branch.
+    
+    If you want to tell Git to always push to `origin master`, we can use the `-u` flag.
+    
+    So if we run `git push -u origin master`, this will tell Git to remember so that the next time you push again, Git will automatically push to `origin master`. This is only ran once, unless you want to change the remote/branch, otherwise, you can type `git push` for any other pushes.
+    
+    Now, if you go back to your GitHub repository, you should see the files that were added to the staging area; now lives in your remote repository, along with the commit messages you have set! 😎
+    
+    🥂 Viola! You have just intergrated Git into your workflow!
+    
 ---
 ## Rolling Back Changes
