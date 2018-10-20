@@ -18,7 +18,7 @@ Now, `cd` into your folder and type `git init`, assuming you already have Git in
 To verify whether Git has been successfully initialized in the correct directory, you can use `ls -a` to view all files/folders
 
 You should see a hidden folder called `.git` in your working directory.  
-<img src="./assets/visuals/ls-a.jpg">
+> <img src="./assets/visuals/ls-a.jpg">
 
 This means that Git has sucessfully set up your local repository
 
@@ -30,7 +30,7 @@ If you do not have a GitHub account, create one [**here**](https://github.com/jo
 After that, you can click [**here**](https://github.com/alexy4744?tab=repositories) to view all your repositories *(or click on your avatar and click "Your Repositories" in the dropdown)*.
 
 You should see a green button called **New** on the upper right side of your screen.  
-<img src="./assets/visuals/new-repo-button.jpg">
+> <img src="./assets/visuals/new-repo-button.jpg">
 
 Now enter your repository name, it **should** match the name of your local repository. Then click on "Create Repository".
 
@@ -47,18 +47,18 @@ For every new remote and local repository created, we need to establish a connec
     * In order to establish a SSH connection with between our local and remote, we first need to get a SSH key from our IDE.
 
     * Each IDE varies, but in order to get one from Cloud9, we can go [**here**](https://c9.io/account/ssh) and copy the first public SSH key for public repositories, or the second one for private repositories.  
-       <img src="./assets/visuals/ssh-keys.jpg">
+       > <img src="./assets/visuals/ssh-keys.jpg">
     
     * We can then add the SSH key into our GitHub account  [**here**](https://github.com/settings/ssh/new), then add a title and paste the key in, then click on "**Add SSH Key**".
    
     * Now go back to your repository and copy the SSH url.  
-       <img src="./assets/visuals/clone-with-ssh.jpg">
+       > <img src="./assets/visuals/clone-with-ssh.jpg">
 
 2. **HTTPS**
     * ***NOTE: HTTPS requires you to sign in to GitHub, unless you have some sort of credential manager that allows Git to save and remember your credentials.***
     
     * In order to get the HTTPS url for your repository, simply copy the HTTPS url.  
-       <img src="./assets/visuals/clone-with-https.jpg">
+       > <img src="./assets/visuals/clone-with-https.jpg">
 
 After we have copied the URL (HTTPS or SSH) for our remote repository, we can go back in to our terminal, and `cd` into our working directory if you are already not in it.
 
@@ -113,7 +113,7 @@ The Git workflow basically consists of edit => add => commit => push.
     
     Commit messages are useful for keeping track all of the changes we have done over time. In additon, commit messages should be short and concise, and also in **PRESENT** tense, not *past* tense even though it seems very tempting.
     
-    To verify/ view all past commits, type `git log`. This will output all previous commits, from the newest to the o  ldest. 
+    To verify/view all past commits, type `git log`. This will output all previous commits, from the newest to the o  ldest. 
     
     To exit `git log`, press "Q" on your keyboard.
     
@@ -182,10 +182,10 @@ You can clone anyone's remote repository, however, if you are not a invited cont
 * This method is used when you are not an invited contributor, meaning you don't have direct push access just by adding it to your remote in Git.
 
 1. First we need to fork the original repository. To fork the repository, press on the ***fork*** button on the upper right hand corner.  
-    <img src="./assets/visuals/fork-button.jpg">
+    > <img src="./assets/visuals/fork-button.jpg">
 
 2. After it has been forked, GitHub will redirect you to the forked repository under your account name. We can now copy the repository URL to clone it. Click on the green ***Clone or download*** button and copy either the SSH/HTTPS url.  
-    <img src="./assets/visuals/clone-download-button.jpg">
+    > <img src="./assets/visuals/clone-download-button.jpg">
 
 3. Go back to your terminal and type `git clone <URL>`, where `<URL>` is the link you just copied.
 
@@ -198,10 +198,10 @@ Once you have pushed all the changes you wish, we can submit a *pull request* to
 
 To submit a pull request:
   1. Click on the ***Pull request*** button in your forked repository.  
-      <img src="./assets/visuals/pull-request-button.jpg">
+      > <img src="./assets/visuals/pull-request-button.jpg">
 
   2. You should now be redirected to this page, where you can compare changes  
-      <img src="./assets/visuals/comparing-changes.jpg">   
+      > <img src="./assets/visuals/comparing-changes.jpg">   
     
       Hopefully, it should say ***Able to merge. These branches can be automatically merged.***
 
@@ -218,12 +218,12 @@ To submit a pull request:
   When a collaborator is invited, they can simply clone the repository and have instant push access to it.
 
 1. On your repository's page, click on the ***Settings*** tab.  
-    <img src="./assets/visuals/settings-tab.jpg">
+    > <img src="./assets/visuals/settings-tab.jpg">
 
 2. Now click on the ***Collaborators*** tab. Enter the username/email and click on ***Add collaborator***.  
-    <img src="./assets/visuals/collabarator-tab.jpg">
+    > <img src="./assets/visuals/collabarator-tab.jpg">
 
 3. Now click on the ***Copy invite link*** next to their name on the list and it should be sent to the user for them to accept the invitation.  
-    <img src="./assets/visuals/copy-invite-link.jpg">
+    > <img src="./assets/visuals/copy-invite-link.jpg">
 
 4. Once the user has accepted the invite, they will have push access permanently unless removed as a collabarator.
