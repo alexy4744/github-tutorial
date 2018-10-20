@@ -155,7 +155,20 @@ The Git workflow basically consists of edit => add => commit => push.
 ---
 ## ↪ Rolling Back Changes
 
+* `git checkout -- FILENAME` - Discards all changes and files that are currently not staged.
 
+* `git reset HEAD FILENAME` - Removes a file from the staging area.
+
+* `git reset --soft HEAD~1` - Undo the previous commit, but leaves the files on the staging area while keeping the changes intact.
+  * `~<NUMBER>` - The amount of commits to undo, i.e. `~1`
+
+* `git reset HEAD~1` - Undo the previous commit, but **REMOVES** the files from the staging area while keeping the changes intact.
+
+* `git reset --hard HEAD~1` - Undo the previous commit, but **REMOVES** the **FILES AND CHANGES**. The commit will be removed from the history.
+
+* `git reset --hard SHA` - Rollback to a previous commit with the SHA provided. Changes will be **LOST**. Any commits after the commit with the provided SHA will be removed from the history.
+
+* `git revert SHA [...]` - Creates a commit that is opposite from the commit provided by the SHA. It will do the opposite of that commit i.e. if you added files, it will remove them on the new commit.
 
 ---
 ## 💑 Collaboration
@@ -227,3 +240,6 @@ To submit a pull request:
     > <img src="./assets/visuals/copy-invite-link.jpg">
 
 4. Once the user has accepted the invite, they will have push access permanently unless removed as a collabarator.
+
+---
+## ❗ Error Handling
