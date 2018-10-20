@@ -1,4 +1,4 @@
-<img src="./assets/Octocat.png" align="right" width="96" height="96">
+<img src="./assets/Octocat.png" align="right" width="196" height="128">
 
 # GitHub Tutorial by Alex
 
