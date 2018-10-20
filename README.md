@@ -1,6 +1,6 @@
-<img src="./assets/Octocat.png" align="right" width="160" height="128">
+<img src="./assets/logos/octocat.png" align="right" width="160" height="128">
 
-# GitHub Tutorial by Alex
+# GitHub Tutorial by [Alex](https://github.com/alexy4744)
 
 ## Git vs. GitHub
 
@@ -9,58 +9,56 @@ Git allows for version control of your files. It allows you to save snapshots (c
 GitHub, on the other hand, is a remote repository. It ***requires*** Git (unless you want to upload files manually). GitHub allows you to create remote repositories, where you can use Git to push your commits to a remote repository. Because it is a remote repository, it allows for collaboration with multiple people.
 
 ---
-## Setting up your local repository
+## 🌈 Creating your local repository
 
-To setup Git locally, `cd` into your folder and type `git init`, assuming you already have Git installed
+First, if you haven't created a directory, type `mkdir FOLDERNAME`  
 
-```bash
-git init
-```
+Now, `cd` into your folder and type `git init`, assuming you already have Git installed
 
 To verify whether Git has been successfully initialized in the correct directory, you can use `ls -a` to view all files/folders
 
-```bash
-ls -a
-```
-
-You should see a hidden folder called `.git` in your working directory.
+You should see a hidden folder called `.git` in your working directory.  
+<img src="./assets/visuals/ls-a.jpg">
 
 This means that Git has sucessfully set up your local repository
 
 ---
-## Creating your remote repository.
+## 🌈 Creating your remote repository.
 
 If you do not have a GitHub account, create one [**here**](https://github.com/join?source=header-home)
 
 After that, you can click [**here**](https://github.com/alexy4744?tab=repositories) to view all your repositories *(or click on your avatar and click "Your Repositories" in the dropdown)*.
 
-You should see a green button called **New** on the upper right side of your screen.
-<!-- put new button screenshot here -->
+You should see a green button called **New** on the upper right side of your screen.  
+<img src="./assets/visuals/new-repo-button.jpg">
 
-Now enter your repository name, it should match the name of your local repository. Then click on "Create Repository".
+Now enter your repository name, it **should** match the name of your local repository. Then click on "Create Repository".
 
 Now, you have both your local and remote repositories created.
 
 ---
-## Connecting your local and remote repository
+## 🔗 Connecting your local and remote repository
 For every new remote and local repository created, we need to establish a connection between them in order to push commits to your remote from the local.
 
 **There are 2 ways of establishing a connection.**
 1. **SSH**  
-    * ***Note: This should only be done once unless you need to add more SSH keys***
+    * ***NOTE: This should only be done once unless you need to add more SSH keys***
 
     * In order to establish a SSH connection with between our local and remote, we first need to get a SSH key from our IDE.
 
-    * Each IDE varies, but in order to get one from Cloud9, we can go [**here**](https://c9.io/account/ssh) and copy the first public SSH key for public repositories, or the second one for private repositories.
+    * Each IDE varies, but in order to get one from Cloud9, we can go [**here**](https://c9.io/account/ssh) and copy the first public SSH key for public repositories, or the second one for private repositories.  
+    <img src="./assets/visuals/ssh-keys.jpg">
     
     * We can then add the SSH key into our GitHub account  [**here**](https://github.com/settings/ssh/new), then add a title and paste the key in, then click on "**Add SSH Key**".
    
-    * Now go back to your repository and copy the SSH url.
+    * Now go back to your repository and copy the SSH url.  
+    <img src="./assets/visuals/clone-with-ssh.jpg">
 
 2. **HTTPS**
-    * ***Note: HTTPS requires you to sign in to GitHub, unless you have some sort of credential manager that allows Git to save and remember your credentials.***
+    * ***NOTE: HTTPS requires you to sign in to GitHub, unless you have some sort of credential manager that allows Git to save and remember your credentials.***
     
-    * In order to get the HTTPS url for your repository, simply copy the HTTPS url.
+    * In order to get the HTTPS url for your repository, simply copy the HTTPS url.  
+    <img src="./assets/visuals/clone-with-https.jpg">
 
 After we have copied the URL (HTTPS or SSH) for our remote repository, we can go back in to our terminal, and `cd` into our working directory if you are already not in it.
 
@@ -85,15 +83,15 @@ Git should output something similar to this:
   ```
 
 ---
-## Workflow & Commands
+## 🌊 Workflow & Commands
 
 Once we have edited our files and want to push to our remote repository, here are the following commands you can follow.
 
 The Git workflow basically consists of edit => add => commit => push.
 
-0. **Edit your files.**
+1. **Edit your files.**
 
-1. **Adding/removing files to the stage.**
+2. **Adding/removing files to the stage.**
 
     The staging area is basically where you can prepare what files should be committed or not. You can add or remove file(s) from the stage.
    
@@ -107,7 +105,7 @@ The Git workflow basically consists of edit => add => commit => push.
    
     Once we have added our files onto the stage, you can verify them by running `git status` again. The files highlighted in green should reflect the files that we have added onto the stage with `git add`.
   
-2. **Commiting files on our stage.**  
+3. **Commiting files on our stage.**  
 
     Once we have our files added onto the stage, we can now commit those files. Commiting simply means taking a snapshot of our files with all of our changes. We can then push these commits onto GitHub.
    
@@ -121,7 +119,7 @@ The Git workflow basically consists of edit => add => commit => push.
     
     🎉 Tada, you have succesfully created your first commit!
     
-3. **Pushing our commit to our remote repository.**
+4. **Pushing our commit to our remote repository.**
 
     Once we have a commit, you can push it to your remote repository.  
     Keep in mind that you can **ONLY PUSH COMMITS**, nothing else.  
@@ -155,30 +153,60 @@ The Git workflow basically consists of edit => add => commit => push.
     🥂 Viola! You have just intergrated Git into your workflow!
     
 ---
-## Rolling Back Changes
+## ↪ Rolling Back Changes
 
 
 
 ---
-## Collaboration
+## 💑 Collaboration
 
 GitHub allows for collaboration with multiple people. You can submit pull requests to a repository to merge your changes to the original repository. You can also be invited to be added as a contributor to a repository and have full push access without forking/cloning.
 
-* **If you are not invited to be a contributor, what you can do is fork and clone a   repository, then push your commits and finally, submit a pull request.**
-
-  [**Fork**](https://help.github.com/articles/fork-a-repo/) - Create a copy of a remote repository to your account. You will have full push access to the forked repository as it is under your GitHub account. It will **NOT** create a local repository (that's where cloning comes in).
+[**Fork**](https://help.github.com/articles/fork-a-repo/) - Create a copy of a remote repository to your account. You will have full push access to the forked repository as it is under your GitHub account. It will **NOT** create a local repository (that's where cloning comes in).
   
-  [**Clone**](https://help.github.com/articles/cloning-a-repository/) - Create a local repository from a remote repository, basically "cloning" the remote to your working directory. 
+[**Clone**](https://help.github.com/articles/cloning-a-repository/) - Create a local repository from a remote repository, basically "cloning" the remote to your working directory. 
   
-  You can clone anyone's remote repository, however, if you are not a invited contributor, or if its not owned by you, you will not have permissions to push to it.
+You can clone anyone's remote repository, however, if you are not a invited contributor, or if its not owned by you, you will not have permissions to push to it.
   
-    * When you clone a repository, you do not need to follow any steps mentioned in:
-      * Setting up your local repository
-      * Creating your remote repository
-      * Connecting your local and remote repository
+* When you clone a repository, you do not need to follow any steps mentioned in:
+  * Setting up your local repository
+  * Creating your remote repository
+  * Connecting your local and remote repository
       
-      Git will take care of those steps for you.
+   Git will take care of those steps for you.
       
-  [**Pull Request**](https://help.github.com/articles/about-pull-requests/) - A request to merge your forked repository with the original repository. Pull requests can be accepted/denied by moderators.
+[**Pull Request**](https://help.github.com/articles/about-pull-requests/) - A request to merge your forked repository with the original repository. Pull requests can be accepted/denied by moderators.
 
+#### Fork/Clone/Pull Request
+* This method is used when you are not an invited contributor, meaning you don't have direct push access just by adding it to your remote in Git.
 
+1. First we need to fork the original repository. To fork the repository, press on the ***fork*** button on the upper right hand corner.  
+  <img src="./assets/visuals/fork-button.jpg">
+
+2. After it has been forked, GitHub will redirect you to the forked repository under your account name. We can now copy the repository URL to clone it. Click on the green ***Clone or download*** button and copy either the SSH/HTTPS url.  
+<img src="./assets/visuals/clone-download-button.jpg">
+
+3. Go back to your terminal and type `git clone <URL>`, where `<URL>` is the link you just copied.
+
+4. Once it has finished cloning, you can do the same Git workflow mentioned in the **🌊 Workflow & Commands** section, which is edit => add => commit => push.
+5
+---
+##### Pull requests
+* ***NOTE: You don't have to submit a pull request for everytime you fork/clone, its completely optional. For example, if you want to just have a personal version of a repository with your personal edits for you own uses, it wouldn't make sense to submit a pull request.***
+
+Once you have pushed all the changes you wish, we can submit a *pull request* to merge our forked repository with the original repository.
+
+To submit a pull request:
+  1. Click on the ***Pull request*** button in your forked repository.  
+      <img src="./assets/visuals/pull-request-button.jpg">
+
+  2. You should now be redirected to this page, where you can compare changes  
+      <img src="./assets/visuals/comparing-changes.jpg">   
+    
+      Hopefully, it should say ***Able to merge. These branches can be automatically merged.***
+
+      If you have a merge conflict,which basically means that GitHub cannot automatically merge the 2 repos because of conflicting changes, you would need to [**resolve**](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/) them.
+      
+      Otherwise, click on the big green button called ***Create pull request*** and enter the title and description.
+      
+  3. From here, it is completely dependent whether reviewers will accept or deny your pull request. If it is accepted, your changes will be added into the original repository. If it is denied, basically nothing will happen.
