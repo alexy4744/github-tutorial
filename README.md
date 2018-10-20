@@ -177,6 +177,7 @@ You can clone anyone's remote repository, however, if you are not a invited cont
       
 [**Pull Request**](https://help.github.com/articles/about-pull-requests/) - A request to merge your forked repository with the original repository. Pull requests can be accepted/denied by moderators.
 
+---
 #### Fork/Clone
 * This method is used when you are not an invited contributor, meaning you don't have direct push access just by adding it to your remote in Git.
 
@@ -190,7 +191,6 @@ You can clone anyone's remote repository, however, if you are not a invited cont
 
 4. Once it has finished cloning, you can do the same Git workflow mentioned in the **🌊 Workflow & Commands** section, which is edit => add => commit => push.
 
----
 #### Submitting a pull request
 * ***NOTE: You don't have to submit a pull request for everytime you fork/clone, its completely optional. For example, if you want to just have a personal version of a repository with your personal edits for you own uses, it wouldn't make sense to submit a pull request.***
 
@@ -210,3 +210,17 @@ To submit a pull request:
       Otherwise, click on the big green button called ***Create pull request*** and enter the title and description.
       
   3. From here, it is completely dependent whether reviewers will accept or deny your pull request. If it is accepted, your changes will be added into the original repository. If it is denied, basically nothing will happen.
+
+---
+#### Inviting collaborators to your repository.
+* By inviting collaborators to your repository, it eliminates the need of forking, cloning and creating pull requests in order for a change to be merged to the repository.
+
+  When a collaborator is invited, they can simply clone the repository and have instant push access to it.
+
+1. On your repository's page, click on the ***Settings*** tab.  
+    <img src="./assets/visuals/settings-tab.jpg">
+
+2. Now click on the ***Collaborators*** tab. Enter the username/email of the user and they will be sent an email confirming whether they want to be a collaborator or not.  
+    <img src="./assets/visuals/collabarator-tab.jpg">
+
+3. Once the user has accepted the invite, they will have push access permanently unless remove as a collabarator.
