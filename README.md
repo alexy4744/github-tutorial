@@ -220,7 +220,10 @@ To submit a pull request:
 1. On your repository's page, click on the ***Settings*** tab.  
     <img src="./assets/visuals/settings-tab.jpg">
 
-2. Now click on the ***Collaborators*** tab. Enter the username/email of the user and they will be sent an email confirming whether they want to be a collaborator or not.  
+2. Now click on the ***Collaborators*** tab. Enter the username/email and click on ***Add collaborator***.  
     <img src="./assets/visuals/collabarator-tab.jpg">
 
-3. Once the user has accepted the invite, they will have push access permanently unless remove as a collabarator.
+3. Now click on the ***Copy invite link*** next to their name on the list and it should be sent to the user for them to accept the invitation.  
+    <img src="./assets/visuals/copy-invite-link.jpg">
+
+4. Once the user has accepted the invite, they will have push access permanently unless removed as a collabarator.
