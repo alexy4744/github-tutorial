@@ -47,18 +47,18 @@ For every new remote and local repository created, we need to establish a connec
     * In order to establish a SSH connection with between our local and remote, we first need to get a SSH key from our IDE.
 
     * Each IDE varies, but in order to get one from Cloud9, we can go [**here**](https://c9.io/account/ssh) and copy the first public SSH key for public repositories, or the second one for private repositories.  
-    <img src="./assets/visuals/ssh-keys.jpg">
+       <img src="./assets/visuals/ssh-keys.jpg">
     
     * We can then add the SSH key into our GitHub account  [**here**](https://github.com/settings/ssh/new), then add a title and paste the key in, then click on "**Add SSH Key**".
    
     * Now go back to your repository and copy the SSH url.  
-    <img src="./assets/visuals/clone-with-ssh.jpg">
+       <img src="./assets/visuals/clone-with-ssh.jpg">
 
 2. **HTTPS**
     * ***NOTE: HTTPS requires you to sign in to GitHub, unless you have some sort of credential manager that allows Git to save and remember your credentials.***
     
     * In order to get the HTTPS url for your repository, simply copy the HTTPS url.  
-    <img src="./assets/visuals/clone-with-https.jpg">
+       <img src="./assets/visuals/clone-with-https.jpg">
 
 After we have copied the URL (HTTPS or SSH) for our remote repository, we can go back in to our terminal, and `cd` into our working directory if you are already not in it.
 
@@ -177,21 +177,21 @@ You can clone anyone's remote repository, however, if you are not a invited cont
       
 [**Pull Request**](https://help.github.com/articles/about-pull-requests/) - A request to merge your forked repository with the original repository. Pull requests can be accepted/denied by moderators.
 
-#### Fork/Clone/Pull Request
+#### Fork/Clone
 * This method is used when you are not an invited contributor, meaning you don't have direct push access just by adding it to your remote in Git.
 
 1. First we need to fork the original repository. To fork the repository, press on the ***fork*** button on the upper right hand corner.  
-  <img src="./assets/visuals/fork-button.jpg">
+    <img src="./assets/visuals/fork-button.jpg">
 
 2. After it has been forked, GitHub will redirect you to the forked repository under your account name. We can now copy the repository URL to clone it. Click on the green ***Clone or download*** button and copy either the SSH/HTTPS url.  
-<img src="./assets/visuals/clone-download-button.jpg">
+    <img src="./assets/visuals/clone-download-button.jpg">
 
 3. Go back to your terminal and type `git clone <URL>`, where `<URL>` is the link you just copied.
 
 4. Once it has finished cloning, you can do the same Git workflow mentioned in the **🌊 Workflow & Commands** section, which is edit => add => commit => push.
-5
+
 ---
-##### Pull requests
+#### Submitting a pull request
 * ***NOTE: You don't have to submit a pull request for everytime you fork/clone, its completely optional. For example, if you want to just have a personal version of a repository with your personal edits for you own uses, it wouldn't make sense to submit a pull request.***
 
 Once you have pushed all the changes you wish, we can submit a *pull request* to merge our forked repository with the original repository.
