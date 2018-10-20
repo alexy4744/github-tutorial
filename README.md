@@ -1,4 +1,4 @@
-<img src="./assets/Octocat.png" align="right" width="196" height="128">
+<img src="./assets/Octocat.png" align="right" width="160" height="128">
 
 # GitHub Tutorial by Alex
 
@@ -158,5 +158,27 @@ The Git workflow basically consists of edit => add => commit => push.
 ## Rolling Back Changes
 
 
+
 ---
 ## Collaboration
+
+GitHub allows for collaboration with multiple people. You can submit pull requests to a repository to merge your changes to the original repository. You can also be invited to be added as a contributor to a repository and have full push access without forking/cloning.
+
+* **If you are not invited to be a contributor, what you can do is fork and clone a   repository, then push your commits and finally, submit a pull request.**
+
+  [**Fork**](https://help.github.com/articles/fork-a-repo/) - Create a copy of a remote repository to your account. You will have full push access to the forked repository as it is under your GitHub account. It will **NOT** create a local repository (that's where cloning comes in).
+  
+  [**Clone**](https://help.github.com/articles/cloning-a-repository/) - Create a local repository from a remote repository, basically "cloning" the remote to your working directory. 
+  
+  You can clone anyone's remote repository, however, if you are not a invited contributor, or if its not owned by you, you will not have permissions to push to it.
+  
+    * When you clone a repository, you do not need to follow any steps mentioned in:
+      * Setting up your local repository
+      * Creating your remote repository
+      * Connecting your local and remote repository
+      
+      Git will take care of those steps for you.
+      
+  [**Pull Request**](https://help.github.com/articles/about-pull-requests/) - A request to merge your forked repository with the original repository. Pull requests can be accepted/denied by moderators.
+
+
